@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  /* Colors */
+  --accent-rose: #7a284e;
+  --lg-rose: #fff7fb;
+  --stone-900: #312e2c;
+  --stone-600: #5f564d;
+  --stone-150: #e3ddd7;
+  --stone-100: #f3e5d7;
+  --accent-brown: #854632;
+  --white: #ffff;
+
+  /* Fonts */
+  --serif: "Young Serif", serif;
+  --sans: "Outfit", sans-serif;
+
+  /* Font Sizes */
+  --fs-t1: 2.25rem;
+  --fs-t2: 1.75rem;
+  --fs-t3: 1.25rem;
+  --fs-t4: 1rem;
+
+  /* Paddings -- small screens */
+  --p-con: 2rem;
+  --p-32: 2rem;
+  --p-24: 1.5rem;
+  --p-16: 1rem;
+  --p-8: 0.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  :root {
+    /* Font Sizes */
+    --fs-t1: 2.5rem;
+    /* Paddings -- large screens */
+    --p-con: 2.5rem;
+
+    --width-con: 46rem;
+  }
+}
+
+/* Typography */
+.t1 {
+  font-size: var(--fs-t1);
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--stone-900);
+  letter-spacing: 0;
+}
+
+.t2 {
+  font-size: var(--fs-t2);
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent-brown);
+  letter-spacing: 0;
+}
+
+.t3 {
+  font-size: var(--fs-t3);
+  font-family: var(--sans);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--stone-900);
+  letter-spacing: 0;
+}
+
+.t4-regular {
+  font-size: var(--fs-t4);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--stone-600);
+  letter-spacing: 0;
+}
+
+.t4-bold {
+  font-size: var(--fs-t4);
+  font-family: var(--sans);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--stone-600);
+  letter-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ol li::marker,
+ul li::marker {
+  color: var(--accent-rose);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--stone-100);
+}
+
+section {
+  width: 100%;
+  background-color: var(--stone-100);
+}
+
+.container {
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container img {
+  width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+  }
+
+  .container {
+    padding: var(--p-con);
+    width: var(--width-con);
+    border-radius: var(--p-24);
+  }
+
+  .container img {
+    border-radius: 12px;
+  }
+}
+.container-content {
+  padding: var(--p-con) var(--p-32);
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: var(--p-24);
+}
+
+.container-content__preparation {
+  background-color: var(--lg-rose);
+  width: 100%;
+  padding: var(--p-24);
+  border-radius: 12px;
+}
+
+.container-content__preparation p {
+  color: var(--accent-rose);
+}
+
+.container-content__preparation ul {
+  padding: 0rem 1rem;
+}
+
+.container-content__preparation ul li {
+  padding-left: 1rem;
+}
+
+.container-content__preparation ul li::marker {
+  font-size: 0.75rem;
+}
+
+.container-content__ingredients ul,
+.container-content__instructions ol {
+  padding: 0rem 1rem;
+}
+
+.container-content__ingredients ul li,
+.container-content__instructions ol li {
+  padding-left: 1rem;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--stone-150);
+}
+
+.container-content__instructions ol {
+  display: flex;
+  gap: var(--p-8);
+  flex-direction: column;
+}
+
+.container-content__nutrition {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  /* gap: var(--p-24); */
+}
+
+.container-content__nutrition__table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.container-content__nutrition__table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--stone-150);
+  padding: 0.5rem 0;
+}
+
+.container-content__nutrition__table p {
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  padding-left: 3rem;
+}
+
+.container-content__nutrition__table span {
+  color: var(--accent-brown);
+  font-weight: bold;
+  padding-right: 3rem;
+}
